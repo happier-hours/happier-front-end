@@ -1,5 +1,6 @@
 import React from 'react';
+import AddForm from '../components/posts/AddForm';
 
 export default function App() {
-  return <h1>Hello World</h1>;
+  return <AddForm />;
 }
