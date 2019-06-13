@@ -5,4 +5,4 @@ export const [
   newPlace,
   NEW_PLACE,
   NEW_PLACE_PENDING
-] = createAction('NEW_PLACE', createPlace);
+] = createAction('NEW_PLACE', makePlace);
