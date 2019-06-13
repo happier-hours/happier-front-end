@@ -1,4 +1,5 @@
 import { createAction } from 'promise-middleware-redux';
+import makePlace from '../services/happierApi';
 // services
 
 export const [
