@@ -1,6 +1,10 @@
 import React from 'react';
-import AddForm from './places/AddForm';
+import CreatePlace from '../container/places/CreatePlace';
 
 export default function App() {
-  return <AddForm />;
+  return (
+    <>
+      <CreatePlace />
+    </>
+  );
 }

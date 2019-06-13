@@ -31,7 +31,7 @@ class CreatePlace extends PureComponent {
     return (
       <AddForm
         onSubmit={this.handleSubmit}
-        onChange={this.onChange}
+        onChange={this.handleChange}
         placeName={placeName}
         address={address}
       />
