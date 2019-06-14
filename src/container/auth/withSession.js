@@ -9,8 +9,9 @@ export const withSession = Component => {
     static propTypes = {
       token: PropTypes.string.isRequired
     }
+
     componentDidMount() {
-      it(!this.props.token) {
+      if(!this.props.token) {
         login();
       }
     }
