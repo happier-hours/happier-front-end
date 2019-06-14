@@ -1,10 +1,20 @@
 import React from 'react';
-import CreatePlace from '../container/places/CreatePlace';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from 'react-router-dom';
+import { withSession } from '../container/auth/withSession';
+import Home from './Home';
+import Callback from '../container/auth/Callback';
 
 export default function App() {
   return (
-    <>
-      <CreatePlace />
-    </>
+    <Router>
+      <Switch>
+        <Route exact path="/" component={withSession(Home)} />
+        <Route path="/callback" component={Callback} />
+      </Switch>
+    </Router>
   );
 }
