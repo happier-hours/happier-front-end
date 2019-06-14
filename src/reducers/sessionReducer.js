@@ -1,6 +1,6 @@
 import { SET_SESSION } from '../actions/sessionActions';
 
-const intialState = {
+const initialState = {
   email: '',
   token: '',
   image: ''
