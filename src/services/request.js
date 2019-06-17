@@ -1,5 +1,5 @@
 import store from '../store';
-import getToken from '../selectors/sessionSelectors';
+import { getToken } from '../selectors/sessionSelectors';
 
 const request = (path, method, body) => {
   // eslint-disable-next-line no-undef
