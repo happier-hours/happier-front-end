@@ -5,7 +5,7 @@ const auth0 = new WebAuth({
   clientID: process.env.AUTH0_CLIENT_ID,
   redirectUri: process.env.AUTH0_CALLBACK,
   responseType: 'token id_token',
-  scope: 'openid'
+  scope: 'openid profile'
 });
 
 export const login = () => {
@@ -20,7 +20,8 @@ export const handleAuth = () => {
           if(err) return reject('Could not get user profile');
           resolve({
             email: profile.name,
-            token: results.accessToken,
+            id: profile.sub,
+            token: results.idToken,
             image: profile.picture
           });
         });
