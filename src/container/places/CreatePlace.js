@@ -26,8 +26,8 @@ class CreatePlace extends PureComponent {
 
   handleSubmit = event => {
     event.preventDefault();
-    const { placeName, address, startTime, endTime, day } = this.state;
-    this.props.createPlace({ placeName, address, startTime, endTime, day });
+    const { placeName, address, startTime, endTime, monday, tuesday, wednesday, thursday, friday, saturday, sunday } = this.state;
+    this.props.createPlace({ placeName, address, startTime, endTime, monday, tuesday, wednesday, thursday, friday, saturday, sunday });
     this.setState({ placeName: '', address: '', startTime: '', endTime: '', monday: false, tuesday: false, wednesday: false, thursday: false, friday: false, saturday: false, sunday: false });
   }
 
