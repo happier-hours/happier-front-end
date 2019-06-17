@@ -34,7 +34,7 @@ AddForm.propTypes = {
   address: PropTypes.string.isRequired,
   startTime: PropTypes.string.isRequired,
   endTime: PropTypes.string.isRequired,
-  day: PropTypes.string.isRequired,
+  day: PropTypes.bool.isRequired,
   submitText: PropTypes.string
 };
 
