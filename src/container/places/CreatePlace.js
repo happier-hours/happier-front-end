@@ -15,14 +15,20 @@ class CreatePlace extends PureComponent {
     address: '',
     startTime: '',
     endTime: '',
-    day: ''
+    monday: false,
+    tuesday: false,
+    wednesday: false,
+    thursday: false,
+    friday: false,
+    saturday: false,
+    sunday: false
   }
 
   handleSubmit = event => {
     event.preventDefault();
     const { placeName, address, startTime, endTime, day } = this.state;
     this.props.createPlace({ placeName, address, startTime, endTime, day });
-    this.setState({ placeName: '', address: '', startTime: '', endTime: '', day: '' });
+    this.setState({ placeName: '', address: '', startTime: '', endTime: '', monday: false, tuesday: false, wednesday: false, thursday: false, friday: false, saturday: false, sunday: false });
   }
 
   handleChange = ({ target }) => {
@@ -30,7 +36,7 @@ class CreatePlace extends PureComponent {
   }
 
   render() {
-    const { placeName, address, startTime, endTime, day } = this.state;
+    const { placeName, address, startTime, endTime, monday, tuesday, wednesday, thursday, friday, saturday, sunday } = this.state;
     return (
       <AddForm
         onSubmit={this.handleSubmit}
@@ -39,7 +45,13 @@ class CreatePlace extends PureComponent {
         address={address}
         startTime={startTime}
         endTime={endTime}
-        day={day}
+        monday={monday}
+        tuesday={tuesday}
+        wednesday={wednesday}
+        thursday={thursday}
+        friday={friday}
+        saturday={saturday}
+        sunday={sunday}
       />
     );
   }
