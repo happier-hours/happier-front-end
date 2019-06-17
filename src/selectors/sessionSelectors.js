@@ -1,2 +1,2 @@
 export const getToken = state => state.session.token;
-export const sessionId = state => state.session.id;
+export const getSessionId = state => state.session.id;
