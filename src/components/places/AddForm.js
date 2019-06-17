@@ -8,19 +8,19 @@ function AddForm({ onSubmit, onChange, placeName, address, startTime, endTime, s
       <input name="address" value={address} onChange={onChange} placeholder="Address" />
       <input type="time" min="9:00" max="18:00" name="startTime" value={startTime} onChange={onChange} />
       <input type="time" min="9:00" max="18:00" name="endTime" value={endTime} onChange={onChange} />
-      <input type="checkbox" id="monday" name="monday" value={true} onChange={onChange}/>
+      <input type="checkbox" id="monday" name="monday" onChange={onChange}/>
       <label htmlFor="monday">M</label>
-      <input type="checkbox" id="tuesday" name="tuesday" value={true} onChange={onChange}/>
+      <input type="checkbox" id="tuesday" name="tuesday" onChange={onChange}/>
       <label htmlFor="tuesday">T</label>
-      <input type="checkbox" id="wednesday" name="wednesday" value={true} onChange={onChange}/>
+      <input type="checkbox" id="wednesday" name="wednesday" onChange={onChange}/>
       <label htmlFor="wednesday">W</label>
-      <input type="checkbox" id="thursday" name="thursday" value={true} onChange={onChange}/>
+      <input type="checkbox" id="thursday" name="thursday" onChange={onChange}/>
       <label htmlFor="thursday">TH</label>
-      <input type="checkbox" id="friday" name="friday" value={true} onChange={onChange}/>
+      <input type="checkbox" id="friday" name="friday" onChange={onChange}/>
       <label htmlFor="friday">F</label>
-      <input type="checkbox" id="saturday" name="saturday" value={true} onChange={onChange}/>
+      <input type="checkbox" id="saturday" name="saturday" onChange={onChange}/>
       <label htmlFor="saturday">Sat</label>
-      <input type="checkbox" id="sunday" name="sunday" value={true} onChange={onChange}/>
+      <input type="checkbox" id="sunday" name="sunday" onChange={onChange}/>
       <label htmlFor="sunday">Sun</label>
       <button>{submitText}</button>
     </form>
@@ -34,13 +34,6 @@ AddForm.propTypes = {
   address: PropTypes.string.isRequired,
   startTime: PropTypes.string.isRequired,
   endTime: PropTypes.string.isRequired,
-  // monday: PropTypes.bool,
-  // tuesday: PropTypes.bool,
-  // wednesday: PropTypes.bool,
-  // thursday: PropTypes.bool,
-  // friday: PropTypes.bool,
-  // saturday: PropTypes.bool,
-  // sunday: PropTypes.bool,
   submitText: PropTypes.string
 };
 

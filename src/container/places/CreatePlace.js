@@ -31,8 +31,11 @@ class CreatePlace extends PureComponent {
     this.setState({ placeName: '', address: '', startTime: '', endTime: '', monday: false, tuesday: false, wednesday: false, thursday: false, friday: false, saturday: false, sunday: false });
   }
 
-  handleChange = ({ target }) => {
-    this.setState({ [target.name]: target.value });
+  handleChange = (event) => {
+    const target = event.target;
+    const value = target.type === 'checkbox' ? target.checked : target.value;
+    const name = target.name;
+    this.setState({ [name]: value });
   }
 
   render() {
