@@ -14,14 +14,15 @@ class CreatePlace extends PureComponent {
     placeName: '',
     address: '',
     startTime: '',
-    endTime: ''
+    endTime: '',
+    day: ''
   }
 
   handleSubmit = event => {
     event.preventDefault();
-    const { placeName, address, startTime, endTime } = this.state;
-    this.props.createPlace({ placeName, address, startTime, endTime });
-    this.setState({ placeName: '', address: '', startTime: '', endTime: '' });
+    const { placeName, address, startTime, endTime, day } = this.state;
+    this.props.createPlace({ placeName, address, startTime, endTime, day });
+    this.setState({ placeName: '', address: '', startTime: '', endTime: '', day: '' });
   }
 
   handleChange = ({ target }) => {
@@ -29,7 +30,7 @@ class CreatePlace extends PureComponent {
   }
 
   render() {
-    const { placeName, address, startTime, endTime } = this.state;
+    const { placeName, address, startTime, endTime, day } = this.state;
     return (
       <AddForm
         onSubmit={this.handleSubmit}
@@ -38,6 +39,7 @@ class CreatePlace extends PureComponent {
         address={address}
         startTime={startTime}
         endTime={endTime}
+        day={day}
       />
     );
   }
