@@ -21,14 +21,27 @@ class CreatePlace extends PureComponent {
     thursday: false,
     friday: false,
     saturday: false,
-    sunday: false
+    sunday: false,
+    sports: false,
+    queer: false,
+    fancy: false,
+    patio: false,
+    groups: false,
+    dive: false,
+    dog: false,
+    games: false,
+    dates: false,
+    wheelchair: false,
+    noisy: false,
+    vegan: false,
+    vegetarian: false
   }
 
   handleSubmit = event => {
     event.preventDefault();
-    const { placeName, address, startTime, endTime, monday, tuesday, wednesday, thursday, friday, saturday, sunday } = this.state;
-    this.props.createPlace({ placeName, address, startTime, endTime, monday, tuesday, wednesday, thursday, friday, saturday, sunday });
-    this.setState({ placeName: '', address: '', startTime: '', endTime: '', monday: false, tuesday: false, wednesday: false, thursday: false, friday: false, saturday: false, sunday: false });
+    const { placeName, address, startTime, endTime, monday, tuesday, wednesday, thursday, friday, saturday, sunday, sports, queer, fancy, patio, groups, dive, dog, games, dates, wheelchair, noisy, vegan, vegetarian } = this.state;
+    this.props.createPlace({ placeName, address, startTime, endTime, monday, tuesday, wednesday, thursday, friday, saturday, sunday, sports, queer, fancy, patio, groups, dive, dog, games, dates, wheelchair, noisy, vegan, vegetarian });
+    this.setState({ placeName: '', address: '', startTime: '', endTime: '', monday: false, tuesday: false, wednesday: false, thursday: false, friday: false, saturday: false, sunday: false,  sports: false, queer: false, fancy: false, patio: false, groups: false, dive: false, dog: false, games: false, dates: false, wheelchair: false, noisy: false, vegan: false, vegetarian: false });
   }
 
   handleChange = (event) => {
@@ -39,7 +52,7 @@ class CreatePlace extends PureComponent {
   }
 
   render() {
-    const { placeName, address, startTime, endTime, monday, tuesday, wednesday, thursday, friday, saturday, sunday } = this.state;
+    const { placeName, address, startTime, endTime, monday, tuesday, wednesday, thursday, friday, saturday, sunday, sports, queer, fancy, patio, groups, dive, dog, games, dates, wheelchair, noisy, vegan, vegetarian } = this.state;
     return (
       <AddForm
         onSubmit={this.handleSubmit}
@@ -55,6 +68,19 @@ class CreatePlace extends PureComponent {
         friday={friday}
         saturday={saturday}
         sunday={sunday}
+        sports={sports}
+        queer={queer}
+        fancy={fancy}
+        patio={patio}
+        groups={groups}
+        dive={dive}
+        dog={dog}
+        games={games}
+        dates={dates}
+        wheelchair={wheelchair}
+        noisy={noisy}
+        vegan={vegan}
+        vegetarian={vegetarian}
       />
     );
   }

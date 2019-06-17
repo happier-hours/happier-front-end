@@ -8,6 +8,7 @@ function AddForm({ onSubmit, onChange, placeName, address, startTime, endTime, s
       <input name="address" value={address} onChange={onChange} placeholder="Address" />
       <input type="time" min="9:00" max="18:00" name="startTime" value={startTime} onChange={onChange} />
       <input type="time" min="9:00" max="18:00" name="endTime" value={endTime} onChange={onChange} />
+
       <input type="checkbox" id="monday" name="monday" onChange={onChange}/>
       <label htmlFor="monday">M</label>
       <input type="checkbox" id="tuesday" name="tuesday" onChange={onChange}/>
@@ -22,6 +23,36 @@ function AddForm({ onSubmit, onChange, placeName, address, startTime, endTime, s
       <label htmlFor="saturday">Sat</label>
       <input type="checkbox" id="sunday" name="sunday" onChange={onChange}/>
       <label htmlFor="sunday">Sun</label>
+
+      <input type="checkbox" id="sports" name="sports" onChange={onChange}/>
+      <label htmlFor="sports">Sports Bar</label>
+      <input type="checkbox" id="queer" name="queer" onChange={onChange}/>
+      <label htmlFor="queer">Queer Friendly</label>
+      <input type="checkbox" id="fancy" name="fancy" onChange={onChange}/>
+      <label htmlFor="fancy">Fancy</label>
+      <input type="checkbox" id="ac" name="ac" onChange={onChange}/>
+      <label htmlFor="ac">A/C</label>
+      <input type="checkbox" id="patio" name="patio" onChange={onChange}/>
+      <label htmlFor="patio">Patio</label>
+      <input type="checkbox" id="groups" name="groups" onChange={onChange}/>
+      <label htmlFor="groups">Groups</label>
+      <input type="checkbox" id="dive" name="dive" onChange={onChange}/>
+      <label htmlFor="dive">Dive</label>
+      <input type="checkbox" id="dog" name="dog" onChange={onChange}/>
+      <label htmlFor="dog">Dog Friendly</label>
+      <input type="checkbox" id="games" name="games" onChange={onChange}/>
+      <label htmlFor="games">Games</label>
+      <input type="checkbox" id="dates" name="dates" onChange={onChange}/>
+      <label htmlFor="dates">Date Friendly</label>
+      <input type="checkbox" id="wheelchair" name="wheelchair" onChange={onChange}/>
+      <label htmlFor="wheelchair">Wheelchair Access</label>
+      <input type="checkbox" id="noisy" name="noisy" onChange={onChange}/>
+      <label htmlFor="noisy">Noisy</label>
+      <input type="checkbox" id="vegan" name="vegan" onChange={onChange}/>
+      <label htmlFor="vegan">Vegan</label>
+      <input type="checkbox" id="vegetarian" name="vegetarian" onChange={onChange}/>
+      <label htmlFor="vegetarian">Vegetarian</label>
+
       <button>{submitText}</button>
     </form>
   );
