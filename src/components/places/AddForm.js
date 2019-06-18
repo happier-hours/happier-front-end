@@ -52,6 +52,12 @@ function AddForm({ onSubmit, onChange, placeName, address, startTime, endTime, s
       <label htmlFor="vegan">Vegan</label>
       <input type="checkbox" id="vegetarian" name="vegetarian" onChange={onChange}/>
       <label htmlFor="vegetarian">Vegetarian</label>
+      <input type="checkbox" id="gluten" name="gluten" onChange={onChange}/>
+      <label htmlFor="gluten">Gluten Free</label>
+      <input type="checkbox" id="parking" name="parking" onChange={onChange}/>
+      <label htmlFor="parking">Parking</label>
+      <input type="checkbox" id="reservations" name="reservations" onChange={onChange}/>
+      <label htmlFor="reservations">Reservations</label>
 
       <button>{submitText}</button>
     </form>
