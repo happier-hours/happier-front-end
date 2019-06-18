@@ -14,7 +14,7 @@ export default function App() {
     <Router>
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route exact path="/add" component={withSession(CreatePlace)} />
+        <Route path="/add" component={withSession(CreatePlace)} />
         <Route path="/callback" component={Callback} />
       </Switch>
     </Router>
