@@ -34,7 +34,10 @@ class CreatePlace extends PureComponent {
     wheelchair: false,
     noisy: false,
     vegan: false,
-    vegetarian: false
+    vegetarian: false,
+    gluten: false,
+    parking: false,
+    reservations: false
   }
 
   handleSubmit = event => {
@@ -42,7 +45,7 @@ class CreatePlace extends PureComponent {
     const { placeName, address, startTime, endTime, monday, tuesday, wednesday, thursday, friday, saturday, sunday, sports, queer, fancy, patio, groups, dive, dog, games, dates, wheelchair, noisy, vegan, vegetarian, gluten, parking, reservations } = this.state;
 
     this.props.createPlace({ placeName, address, startTime, endTime, monday, tuesday, wednesday, thursday, friday, saturday, sunday, sports, queer, fancy, patio, groups, dive, dog, games, dates, wheelchair, noisy, vegan, vegetarian, gluten, parking, reservations });
-    
+
     this.setState({ placeName: '', address: '', startTime: '', endTime: '', monday: false, tuesday: false, wednesday: false, thursday: false, friday: false, saturday: false, sunday: false,  sports: false, queer: false, fancy: false, patio: false, groups: false, dive: false, dog: false, games: false, dates: false, wheelchair: false, noisy: false, vegan: false, vegetarian: false, gluten: false, parking: false, reservations: false });
   }
 
