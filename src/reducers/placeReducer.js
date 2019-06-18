@@ -19,7 +19,7 @@ export default function reducer(state = initialState, action) {
     case FETCH_PLACES_PENDING:
       return { ...state, loading: true };
     case FETCH_PLACES:
-      return { ...state, loading: false, list: action.payload }
+      return { ...state, loading: false, list: action.payload };
     default:
       return state;
   }
