@@ -6,8 +6,8 @@ function AddForm({ onSubmit, onChange, placeName, address, startTime, endTime, s
     <form onSubmit={onSubmit}>
       <input name="placeName" value={placeName} onChange={onChange} placeholder="Place Search" />
       <input name="address" value={address} onChange={onChange} placeholder="Address" />
-      <input type="time" min="9:00" max="18:00" name="startTime" value={startTime} onChange={onChange} />
-      <input type="time" min="9:00" max="18:00" name="endTime" value={endTime} onChange={onChange} />
+      <input type="time" min="8:00" max="24:00" name="startTime" value={startTime} onChange={onChange} />
+      <input type="time" min="8:00" max="24:00" name="endTime" value={endTime} onChange={onChange} />
 
       <input type="checkbox" id="monday" name="monday" onChange={onChange}/>
       <label htmlFor="monday">M</label>
@@ -52,6 +52,12 @@ function AddForm({ onSubmit, onChange, placeName, address, startTime, endTime, s
       <label htmlFor="vegan">Vegan</label>
       <input type="checkbox" id="vegetarian" name="vegetarian" onChange={onChange}/>
       <label htmlFor="vegetarian">Vegetarian</label>
+      <input type="checkbox" id="gluten" name="gluten" onChange={onChange}/>
+      <label htmlFor="gluten">Gluten Free</label>
+      <input type="checkbox" id="parking" name="parking" onChange={onChange}/>
+      <label htmlFor="parking">Parking</label>
+      <input type="checkbox" id="reservations" name="reservations" onChange={onChange}/>
+      <label htmlFor="reservations">Reservations</label>
 
       <button>{submitText}</button>
     </form>
