@@ -7,12 +7,14 @@ import {
 import { withSession } from '../container/auth/withSession';
 import Home from './Home';
 import Callback from '../container/auth/Callback';
+import CreatePlace from '../container/places/CreatePlace';
 
 export default function App() {
   return (
     <Router>
       <Switch>
-        <Route exact path="/" component={withSession(Home)} />
+        <Route exact path="/" component={Home} />
+        <Route exact path="/add" component={withSession(CreatePlace)} />
         <Route path="/callback" component={Callback} />
       </Switch>
     </Router>
