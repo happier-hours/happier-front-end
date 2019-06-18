@@ -18,3 +18,5 @@ function Places({ places }) {
 Places.propTypes = {
   places: PropTypes.array.isRequired
 };
+
+export default Places;
