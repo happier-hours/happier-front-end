@@ -1,5 +1,5 @@
 import { post, get } from './request';
 
-export const makePlace = place => post('/api/v1/places', place);
-export const getPlaces = () => get('/api/v1/places');
-export const getPlace = id => get(`/api/v1/places/${id}`);
+export const makePlace = place => post('/places', place);
+export const getPlaces = () => get('/places');
+export const getPlace = id => get(`/places/${id}`);

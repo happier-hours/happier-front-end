@@ -1,1 +1,1 @@
-export const getPlaceByDetail = state => state.detail;
+export const getPlaceByDetail = state => state.detail.details;

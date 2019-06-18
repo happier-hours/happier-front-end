@@ -18,4 +18,4 @@ export const [
   fetchPlaceById,
   FETCH_PLACE_BY_ID,
   FETCH_PLACE_BY_ID_PENDING
-] = createAction('FETCH_PLACES_BY_ID', getPlace);
+] = createAction('FETCH_PLACE_BY_ID', getPlace);
