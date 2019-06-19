@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default function PlaceDetail({ place }) {
+function PlaceDetail({ place }) {
   const {
     placeName,
     address,
@@ -76,5 +76,7 @@ export default function PlaceDetail({ place }) {
 }
 
 PlaceDetail.propTypes = {
-  place: PropTypes.object
-}.isRequired;
+  place: PropTypes.object.isRequired
+};
+
+export default PlaceDetail;
