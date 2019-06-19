@@ -9,6 +9,9 @@ import { getPlaceDetail } from '../../selectors/detailPlaceSelector';
 class PlaceById extends PureComponent {
   static propTypes = {
     place: PropTypes.object.isRequired,
+    // place: PropTypes.shape({
+    //   details: PropTypes.object.isRequired
+    // }).isRequired,
     fetch: PropTypes.func.isRequired
   }
 
