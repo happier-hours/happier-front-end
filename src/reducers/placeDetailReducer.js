@@ -4,11 +4,12 @@ import {
 } from '../actions/placeAction';
 
 const initialState = {
-  loading: false,
+  loading: true,
   details: {}
 };
 
 export default function reducer(state = initialState, action) {
+  console.log(state, 'state in reducer');
   switch(action.type) {
     case FETCH_PLACE_BY_ID_PENDING:
       return { ...state, loading: true };

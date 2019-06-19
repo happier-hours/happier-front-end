@@ -7,7 +7,9 @@ import { getPlaceByDetail } from '../../selectors/detailPlaceSelector';
 
 class PlaceById extends PureComponent {
   static propTypes = {
-    place: PropTypes.object.isRequired,
+    place: PropTypes.shape({
+      details: PropTypes.object.isRequired
+    }).isRequired,
     fetch: PropTypes.func.isRequired
   }
 
@@ -16,7 +18,7 @@ class PlaceById extends PureComponent {
   }
 
   render() {
-    const place = this.props;
+    const { place } = this.props;
     return <PlaceDetail place={place} />;
   }
 }
