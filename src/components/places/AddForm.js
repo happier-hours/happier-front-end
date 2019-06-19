@@ -71,7 +71,32 @@ AddForm.propTypes = {
   address: PropTypes.string.isRequired,
   startTime: PropTypes.string.isRequired,
   endTime: PropTypes.string.isRequired,
-  submitText: PropTypes.string
+  submitText: PropTypes.string,
+  monday: PropTypes.bool,
+  tuesday: PropTypes.bool,
+  wednesday: PropTypes.bool,
+  thursday: PropTypes.bool,
+  friday: PropTypes.bool,
+  saturday: PropTypes.bool,
+  sunday: PropTypes.bool,
+  sports: PropTypes.bool,
+  queer: PropTypes.bool,
+  fancy: PropTypes.bool,
+  ac: PropTypes.bool,
+  patio: PropTypes.bool,
+  groups: PropTypes.bool,
+  dive: PropTypes.bool,
+  dog: PropTypes.bool,
+  games: PropTypes.bool,
+  dates: PropTypes.bool,
+  wheelchair: PropTypes.bool,
+  noisy: PropTypes.bool,
+  vegan: PropTypes.bool,
+  vegetarian: PropTypes.bool,
+  gluten: PropTypes.bool,
+  parking: PropTypes.bool,
+  reservations: PropTypes.bool
+
 };
 
 AddForm.defaultProps = {

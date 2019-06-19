@@ -17,7 +17,7 @@ export default function App() {
         <Route exact path="/" component={Home} />
         <Route path="/add" component={withSession(CreatePlace)} />
         <Route path="/callback" component={Callback} />
-        <Route path="/places/:id" component={PlaceById} />
+        <Route path="/:id" component={PlaceById} />
       </Switch>
     </Router>
   );

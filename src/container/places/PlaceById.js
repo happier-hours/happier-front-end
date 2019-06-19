@@ -1,9 +1,10 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import PlaceDetail from '../../components/places/PlaceDetail';
-import { fetchPlaceById } from '../../actions/placeAction';
-import { getPlaceByDetail } from '../../selectors/detailPlaceSelector';
+import { fetchPlaceById } from '../../actions/placeDetailAction';
+import { getPlaceDetail } from '../../selectors/detailPlaceSelector';
 
 class PlaceById extends PureComponent {
   static propTypes = {
@@ -22,7 +23,7 @@ class PlaceById extends PureComponent {
 }
 
 const mapStateToProps = state => ({
-  place: getPlaceByDetail(state)
+  place: getPlaceDetail(state)
 });
 
 const mapDispatchToProps = (dispatch, { match }) => ({
@@ -31,7 +32,7 @@ const mapDispatchToProps = (dispatch, { match }) => ({
   }
 });
 
-export default connect(
+export default withRouter(connect(
   mapStateToProps,
   mapDispatchToProps
-)(PlaceById);
+)(PlaceById));
